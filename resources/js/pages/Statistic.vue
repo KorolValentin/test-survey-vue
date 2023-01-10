@@ -48,8 +48,8 @@ export default {
                 }
             })
 
-            console.log(this.questions);
-            console.log(this.results);
+            // console.log(this.questions);
+            // console.log(this.results);
         },
         loadResults() {
             axios.get('/api/statistic')

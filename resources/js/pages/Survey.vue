@@ -2,10 +2,8 @@
     <div class="uk-flex uk-flex-column uk-text-center">
         <ul class="uk-display-inline-block">
             <template v-for="question in questions">
-                <!--            <li v-for="question in questions" data-id="{{ question.id }}">-->
-
                 <li><span >
-                {{ question.id }}. {{ question.title }} . {{ results[question.id] }}
+                {{ question.id }}. {{ question.title }}
             </span>
                     <ul class="uk-background-muted">
                         <li v-for="rating in 5" class="uk-flex-inline uk-padding-small">
@@ -18,7 +16,7 @@
                                     :checked="results[question.id] == rating"
                                     type="radio"
                                     class="uk-radio">
-                                <label :for="question.id + '-' + rating" class="p-1">{{ rating }} , {{ results[question.id] === rating}} , {{ results[question.id] }}</label>
+                                <label :for="question.id + '-' + rating" class="p-1">{{ rating }}</label>
                             </div>
                         </li>
                     </ul>
